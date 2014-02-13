@@ -7,5 +7,5 @@ def my_callback(sender, **kwargs):
 
 from easy_thumbnails.signals import thumbnail_created
 
-if settings.COMPRESS_IMAGES:
+if getattr(settings, "COMPRESS_IMAGES", True):
     thumbnail_created.connect(my_callback)
