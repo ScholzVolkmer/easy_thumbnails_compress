@@ -15,9 +15,11 @@ class CompressImage(Task):
         """
         path = os.path.join(settings.MEDIA_ROOT, str(sender))
         callcmd = []
-        callcmd.append('trimage')
-        callcmd.append('-q')
-        callcmd.append('--file={0}'.format(path))
+#        callcmd.append('trimage')
+#        callcmd.append('-q')
+#        callcmd.append('--file={0}'.format(path))
+        callcmd.append('picopt')
+        callcmd.append(path)
         p = subprocess.call(callcmd, close_fds=True, env=os.environ )
 
         logger.debug("compressing: {0}".format(path))

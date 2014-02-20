@@ -8,6 +8,6 @@ setup(name="easy_thumbnails_compress",
       author_email="s@digitalkultur.net",
       packages=['easy_thumbnails_compress'],
       license = 'LGPLv3',
-      description = "ties in with easy_thumbnail, trimage and celery to compress thumbnails of easy_thumbnails after they are created.",
-      install_requires = [ 'django', 'easy-thumbnails' ],
+      description = "ties in with easy_thumbnail, picopt and celery to compress thumbnails of easy_thumbnails after they are created.",
+      install_requires = [ 'django', 'easy-thumbnails']#, 'picopt'], #picopt muss von https://github.com/ScholzVolkmer/picopt
 )
